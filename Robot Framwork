@@ -1,1 +1,27 @@
+安裝 Robot Framework
+1. 安裝 pip
+   $ sudo easy_install pip
+
+2. 安裝 Robot Framework
+   $ sudo pip install robotframework
+
+3. 安裝 RIDE (IDE) (可裝可不裝)
+   $ sudo pip install robotframework-ride
+
+4. 要可以開啟 RIDE 的話，需安裝 wxPython (GUI)
+   (1) 至網站http://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/下載「wxPython2.8-osx-unicode-2.8.12.1-universal-py2.7.dmg」封包，但此封包無法直接安裝，會出現在「安裝失敗」
+   (2) 點選「wxPython2.8-osx-unicode-universal-py2.7.pkg」封包的「右鍵 > 顯示套件內容」，打開「Contents > Resources」文件夾
+   (3) 解壓縮此壓縮檔「wxPython2.8-osx-unicode-universal-py2.7.pax.gz」
+   (4) 解壓縮後會出現 usr 目錄，將此 usr 目錄中的 local/lib 複製到本機端的 usr/local 目錄下
+   (5) 將「Contents > Resources」 內的「postflight」複製到桌面
+   (6) 切換到桌面後，執行 postflight
+     $ cd \Desktop
+     $ sudo ./postflight
+   (7) 接著執行 ride.py 後會出現「python should be executed in 32-bit mode with wxPython on OSX.」
+     因為 Python 驅動是 32 位元的，而我們安裝的是 64 位元的，輸入以下命令強致執行 32 位元
+     $ defaults write com.apple.versioner.python Prefer-32-Bit -bool yes
+
+5. 接著啟動 ride，可以成功開啟！
+   $ ride.py
+
 
