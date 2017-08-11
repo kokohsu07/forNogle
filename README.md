@@ -1,4 +1,0 @@
-# forNogle
-
-
-koko test
